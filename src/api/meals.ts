@@ -12,9 +12,7 @@ export async function getRecentMeals(): Promise<MealResponse[]> {
 }
 
 export async function getMeals(from: string, to: string): Promise<MealResponse[]> {
-  const { data } = await apiClient.get<MealResponse[]>('/api/meals', {
-    params: { from, to },
-  })
+  const { data } = await apiClient.get<MealResponse[]>('/api/meals', { params: { from, to } })
   return data
 }
 
