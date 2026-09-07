@@ -6,11 +6,11 @@ import { extractErrorMessage } from '@/api/client'
 import type { WeeklySummaryResponse, MealResponse } from '@/types/meal'
 
 const STAT_CONFIG = [
-  { key: 'avgCaloriesPerDay', label: 'Calories', unit: 'kcal', icon: Flame, color: 'text-peach-400', bg: 'bg-peach-500/10' },
-  { key: 'avgProteinG', label: 'Protein', unit: 'g', icon: Beef, color: 'text-accent-400', bg: 'bg-accent-500/10' },
-  { key: 'avgCarbsG', label: 'Carbs', unit: 'g', icon: Wheat, color: 'text-amber-400', bg: 'bg-amber-500/10' },
-  { key: 'avgFatG', label: 'Fat', unit: 'g', icon: Droplet, color: 'text-sky-400', bg: 'bg-sky-500/10' },
-  { key: 'avgFiberG', label: 'Fiber', unit: 'g', icon: Leaf, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+  { id: 'avgCaloriesPerDay', label: 'Calories', unit: 'kcal', icon: Flame, color: 'text-peach-400', bg: 'bg-peach-500/10' },
+  { id: 'avgProteinG', label: 'Protein', unit: 'g', icon: Beef, color: 'text-accent-400', bg: 'bg-accent-500/10' },
+  { id: 'avgCarbsG', label: 'Carbs', unit: 'g', icon: Wheat, color: 'text-amber-400', bg: 'bg-amber-500/10' },
+  { id: 'avgFatG', label: 'Fat', unit: 'g', icon: Droplet, color: 'text-sky-400', bg: 'bg-sky-500/10' },
+  { id: 'avgFiberG', label: 'Fiber', unit: 'g', icon: Leaf, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
 ] as const
 
 function StatCard({ label, value, unit, icon: Icon, color, bg }: {
@@ -97,7 +97,7 @@ export function DashboardPage() {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
             {STAT_CONFIG.map((stat) => (
-              <StatCard key={stat.key} {...stat} value={summary![stat.key]} />
+              <StatCard key={stat.id} {...stat} value={summary![stat.id]} />
             ))}
           </div>
         )}
