@@ -1,4 +1,4 @@
-# LogYourMeal - Frontend
+# Meal Tracker - Frontend
 
 React + TypeScript + Vite. See inline comments in `AuthContext.tsx` for the
 documented token-storage tradeoff, and `client.ts` for the centralized

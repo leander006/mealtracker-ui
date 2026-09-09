@@ -7,6 +7,7 @@ import { SignupPage } from '@/pages/SignupPage'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { ScanPage } from '@/pages/ScanPage'
 import { HistoryPage } from '@/pages/HistoryPage'
+import { GoalsPage } from '@/pages/GoalsPage'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
               <Route path="/" element={<DashboardPage />} />
               <Route path="/scan" element={<ScanPage />} />
               <Route path="/history" element={<HistoryPage />} />
+              <Route path="/goals" element={<GoalsPage />} />
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

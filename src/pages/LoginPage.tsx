@@ -32,7 +32,7 @@ export function LoginPage() {
       {/* Left panel - brand/hero, hidden on small screens */}
       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-ink-900 via-ink-950 to-ink-900 items-center justify-center p-16">
         <div className="absolute top-0 left-0 w-full h-full opacity-20"
-          style={{ background: 'radial-gradient(circle at 30% 20%, rgba(143,214,57,0.4), transparent 50%)' }} />
+             style={{ background: 'radial-gradient(circle at 30% 20%, rgba(143,214,57,0.4), transparent 50%)' }} />
         <div className="relative z-10 max-w-md">
           <div className="w-12 h-12 rounded-xl bg-accent-500 flex items-center justify-center mb-8">
             <Salad className="w-7 h-7 text-ink-950" strokeWidth={2.5} />
@@ -54,7 +54,7 @@ export function LoginPage() {
             <div className="w-8 h-8 rounded-lg bg-accent-500 flex items-center justify-center">
               <Salad className="w-5 h-5 text-ink-950" strokeWidth={2.5} />
             </div>
-            <span className="font-bold text-lg">LogYourMeal</span>
+            <span className="font-bold text-lg">MealTracker</span>
           </div>
 
           <h2 className="text-2xl font-bold mb-1">Welcome back</h2>

@@ -1,11 +1,12 @@
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { LayoutDashboard, Camera, History, LogOut, Salad } from 'lucide-react'
+import { LayoutDashboard, Camera, History, LogOut, Salad, Target } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/scan', label: 'Scan Meal', icon: Camera },
   { to: '/history', label: 'History', icon: History },
+  { to: '/goals', label: 'Goals', icon: Target },
 ]
 
 export function Layout() {
@@ -27,7 +28,7 @@ export function Layout() {
             <div className="w-8 h-8 rounded-lg bg-accent-500 flex items-center justify-center">
               <Salad className="w-5 h-5 text-ink-950" strokeWidth={2.5} />
             </div>
-            <span className="font-bold text-lg tracking-tight">LogYourMeal</span>
+            <span className="font-bold text-lg tracking-tight">MealTracker</span>
           </div>
 
           <nav className="flex-1 space-y-1">
@@ -37,10 +38,11 @@ export function Layout() {
                 <Link
                   key={to}
                   to={to}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${isActive
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                    isActive
                       ? 'bg-accent-500/10 text-accent-400 shadow-glow'
                       : 'text-neutral-400 hover:text-neutral-100 hover:bg-ink-800'
-                    }`}
+                  }`}
                 >
                   <Icon className="w-[18px] h-[18px]" strokeWidth={2} />
                   {label}
